@@ -15,7 +15,7 @@ if (!isset($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
     <link rel="stylesheet" href="style_home.css">
-    <title>Welcome</title>
+    <title>Bienvenido</title>
 </head>
 <body>
       <!--encabezado-->   
