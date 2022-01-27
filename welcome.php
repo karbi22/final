@@ -15,6 +15,8 @@ if (!isset($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
     <link rel="stylesheet" href="stilos/style_home.css">
+    <!--para el reloj -->
+    <link rel="stylesheet" href="stilos/style_home.css">
     <title>Bienvenido</title>
 </head>
 <body>
@@ -52,8 +54,13 @@ if (!isset($_SESSION['username'])) {
           <div id="tasks"></div>
         </div>
       </div>
+       <!-- agrege esto mas -->
+       <div class='reloj'>
+          <span id='tiempo'>00 : 00 : 00</span>
+        </div>
     </div>
     <!-- scrip-->
     <script src="app.js"></script>
+    <script src="js/reloj.js"></script>
   </body>
 </html>
