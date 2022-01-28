@@ -1,12 +1,4 @@
-<?php 
 
-session_start();
-
-if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,14 +8,27 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
     <link rel="stylesheet" href="style_home.css">
     <title>Bienvenido</title>
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+    <script>
+        
+    const firebaseConfig = {
+        apiKey: "AIzaSyCqt0LESTaOgSPuvXp-8ZkCRT_-hU2fBK4",
+        authDomain: "todolist-dfb86.firebaseapp.com",
+        projectId: "todolist-dfb86",
+        storageBucket: "todolist-dfb86.appspot.com",
+        messagingSenderId: "247773905327",
+        appId: "1:247773905327:web:25a077516dfdd680b7ef5a"
+      };
+      firebase.initializeApp(firebaseConfig);
+      </script>
 </head>
 <body>
       <!--encabezado-->   
     <nav class="navbar navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#"><?php echo "<h1>Bienvenido(a) " . $_SESSION['username'] . " a tu lista de que haceres.</h1>"; ?></a>
+        <a class="navbar-brand" href="#"><h1>Bienvenid@ a tu lista de que haceres.</h1></a>
       </div>
-      <button type="button" class="btn btn-warning"><a href="logout.php">Cerrar sesion</a></button>
+      <button onclick="cerrarsesion()" type="button" class="btn btn-warning">Cerrar sesion</button>
 
     </nav>
     </body>
@@ -55,5 +60,6 @@ if (!isset($_SESSION['username'])) {
     </div>
     <!-- scrip-->
     <script src="app.js"></script>
+    <script src="assets/js/cerrarsesion.js"></script>
   </body>
 </html>
