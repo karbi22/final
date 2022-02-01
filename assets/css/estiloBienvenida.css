@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+#menu button{
+font-size: 18px;
+font-weight: bold;
+
+}
+#uu{
+  font-size: 20px;
+}
+#menu{
+	
+	width: 100%;
+	height: 66px;
+  background: linear-gradient(50deg, #22835a, rgb(230, 162, 36));
+	position: fixed;
+    box-shadow: white;
+	font-weight: bold;
+	color: rgb(0, 0, 0);
+  z-index: 2;
+	
+}
+#asss{
+  color: #ffffff;
+  background-color: rgb(2, 72, 163);
+}
+#rt{
+  color: #ffffff;
+  background-color: rgb(53, 24, 0);
+
+}
+#rowss{
+  margin-top: 90px;
+}
+
+:root {
+    --clr-primary: rgb(36, 99, 128);
+    --clr-light: #f4f4f4;
+    --clr-dark: #333;
+    --clr-warning: rgb(2, 250, 229);
+    --rojo: #E50914;
+
+  }
+  
+  *,
+  *::before,
+  *::after {
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+     background: linear-gradient(50deg, #e7a334, rgb(136, 209, 208));
+    
+    color: var(--clr-light);
+    display: grid;
+    grid: "header header header header" auto "...... lists  active ......" auto/1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+  }
+  
+  .title {
+    grid-area: header;
+    text-align: center;
+    font-size: calc(7vw + 2rem);
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+    margin:  1 0.2em;
+  }
+  
+  .all-tasks {
+    grid-area: lists;
+    
+  }
+  
+  .task-list {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    list-style: circle;
+    padding-left: 1.1em;
+  }
+  
+  .list-name {
+    cursor: pointer;
+  }
+  
+  .list-name:hover {
+    opacity: 0.7;
+  }
+  
+  form {
+    display: flex;
+  }
+  
+  .btn {
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    padding: 0;
+    color: inherit;
+   
+  }
+  
+  .btn.create {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-right: 0.25em;
+    transition: opacity 250ms ease-in;
+
+  }
+  
+  .btn.create:hover {
+    opacity: 0.7;
+  }
+  
+  .btn.delete {
+    opacity: 0.7;
+    font-size: 1rem;
+    transition: color 200ms;
+    background-color: rgb(15, 27, 131);
+    
+  }
+  
+  .btn.delete:hover {
+    color: var(--clr-warning);
+    font-weight: bold;
+  }
+  
+  .new {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    border-bottom: 1px solid currentColor;
+    font-size: inherit;
+    outline: none;
+    padding: 0.25em;
+    transition: border-bottom 150ms ease-in;
+    order: 2;
+  }
+  
+  .new::-webkit-input-placeholder {
+    opacity: 0.4;
+  }
+  
+  .new:-ms-input-placeholder {
+    opacity: 0.4;
+  }
+  
+  .new::-ms-input-placeholder {
+    opacity: 0.4;
+  }
+  
+  .new::placeholder {
+    opacity: 0.4;
+    color:rgb(12, 170, 154);
+  }
+  
+  .new:focus {
+    border-bottom-width: 3px;
+  }
+  
+  .new:focus::-webkit-input-placeholder {
+    opacity: 0.15;
+  }
+  
+  .new:focus:-ms-input-placeholder {
+    opacity: 0.15;
+    
+  }
+  
+  .new:focus::-ms-input-placeholder {
+    opacity: 0.15;
+  }
+  
+  .new:focus::placeholder {
+    opacity: 0.15;
+    
+  }
+  
+  .new.list {
+    font-size: 1.1rem;
+  }
+  
+  .new.task {
+    margin-bottom: 0;
+  }
+  
+  .active-list {
+    font-weight: 700;
+  }
+  
+  .todo-list {
+    --spacer: 2rem;
+    grid-area: active;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    
+  }
+  
+  .todo-header {
+    padding: var(--spacer);
+    background: #f3e8ab;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .list-title {
+    margin: 0 1em 0 0;
+  }
+  
+  .task-count {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .todo-body {
+    padding: var(--spacer);
+    position: relative;
+  }
+  
+  .new-task-creator .create {
+    color: var(--clr-primary);
+  }
+  
+  [type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .task label {
+    display: flex-inline;
+    align-items: center;
+    position: relative;
+    font-size: 1.3rem;
+    color: black; 
+  }
+  
+  .task {
+    position: relative;
+    margin-bottom: 1.25em;
+  }
+  
+  .task::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -0.5em;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.1;
+  }
+  
+  .custom-checkbox {
+    --size: 1em;
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    margin-right: var(--size);
+    cursor: pointer;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    transition: -webkit-transform 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
+    transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  }
+  
+  .task:hover .custom-checkbox,
+  [type="checkbox"]:focus + label .custom-checkbox {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    color: var(--clr-primary);
+  }
+  
+  [type="checkbox"]:checked + label .custom-checkbox {
+    background: var(--clr-primary);
+    border-color: var(--clr-primary);
+    box-shadow: inset 0 0 0px 2px white;
+  }
+  
+  [type="checkbox"]:checked + label {
+    opacity: 0.5;
+  }
+  
+  .task label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    left: 1.5em;
+    top: 50%;
+    height: 3px;
+    background: currentColor;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    transition: -webkit-transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  }
+  
+  [type="checkbox"]:checked + label::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+  
+  .delete-stuff {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -35px;
+    color: var(--clr-light);
+  }
+/*imagen estilo*/
+
+
+.container__cover .svg img{
+  width: 40vmax;
+  height: 45vmax  ;
+  animation: move-vector 4s linear infinite;
+  z-index: -3 ;
+  text-align: left;
+  margin-top: 0;
+  position: absolute;
+  grid-area: active;
+  
+}
+
+@keyframes move-vector {
+  0%{
+      transform: translateY(25px);
+  }50%{
+      transform: translateY(0px);
+  }100%{
+      transform: translateY(25px);
+  }
+}
+
+/*trabajando en el responsive designado*/
+@media screen and (max-width: 1100px ){
+  .container__cover .svg img{
+    width: 35vmax;
+    height: 45vmax  ;
+    animation: move-vector 4s linear infinite;
+    z-index: -3 ;
+    text-align: left;
+    margin-top: 0;
+    position: absolute;
+    
+  }
+  
+  @keyframes move-vector {
+    0%{
+        transform: translateY(25px);
+    }50%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(25px);
+    }
+  }
+
+}
+@media screen and (max-width: 950px ){
+  .container__cover .svg img{
+    width: 30vmax;
+    height: 35vmax ;
+    animation: move-vector 4s linear infinite;
+    z-index: -3 ;
+    text-align: left;
+    margin-top: 10px;
+    position: absolute;
+    
+  }
+  
+  @keyframes move-vector {
+    0%{
+        transform: translateY(25px);
+    }50%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(25px);
+    }
+  }
+
+}
+
+@media screen and (max-width: 814px ){
+  .container__cover .svg img{
+    width: 20vmax;
+    height: 25vmax ;
+    animation: move-vector 8s linear infinite;
+    z-index: -3 ;
+    text-align: left;
+    margin-top: 40px;
+    position: absolute;
+    
+  }
+  
+  @keyframes move-vector {
+    0%{
+        transform: translateY(200px);
+    }50%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(200px);
+    }
+  }
+
+}
+@media screen and (max-width: 535px ){
+  .container__cover .svg img{
+    width: 15vmax;
+    height: 20vmax ;
+    animation: move-vector 8s linear infinite;
+    z-index: -3 ;
+    text-align: left;
+    margin-top: 40px;
+    position: absolute;
+    
+  }
+  
+  @keyframes move-vector {
+    0%{
+        transform: translateY(200px);
+    }50%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(200px);
+    }
+  }
+
+}
