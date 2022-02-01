@@ -8,8 +8,15 @@
     
     <!--para el reloj -->
     <link rel="stylesheet" href="stilos/style_home.css">
-    
     <link rel="stylesheet" href="stilos/reloj.css">
+    <!-- contenido extra del navigetor-->
+    <link rel="stylesheet" href="stilos/navigator.css">
+    <meta charset="UTF-8">
+   
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--termin a aca-->
     <title>Bienvenido</title>
 
     <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
@@ -27,17 +34,95 @@
       </script>
 
 </head>
-<body>
-      <!--encabezado-->   
+<body> 
+  <!--contenido de navigator barra -->
+  <div class="sidebar">
+  <div class="logo-details">
+    <i class='bx bxl-c-plus-plus icon'></i>
+      <a href="#"><div class="logo_name">TodoList</div></a>
+      <i class='bx bx-menu' id="btn" ></i>
+  </div>
+  <ul class="nav-list">
+    <li>
+        <i class='bx bx-search' ></i>
+       <input type="text" placeholder="Buscar...">
+       <span class="tooltip">Buscar</span>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Mangas</span>
+      </a>
+       <span class="tooltip">Mangas</span>
+    </li>
+    <li>
+     <a href="#">
+       <i class='bx bx-user' ></i>
+       <span class="links_name">Usuario</span>
+     </a>
+     <span class="tooltip">Usuario</span>
+   </li>
+   <li>
+     <a href="#">
+       <i class='bx bx-chat' ></i>
+       <span class="links_name">Mensajes</span>
+     </a>
+     <span class="tooltip">Mensages</span>
+   </li>
+   
+   <li>
+     <a href="#">
+       <i class='bx bx-folder' ></i>
+       <span class="links_name">Imagenes</span>
+     </a>
+     <span class="tooltip">Imagenes</span>
+   </li>
+    
+   <li>
+     <a href="#">
+       <i class='bx bx-heart' ></i>
+       <span class="links_name">Valoranos</span>
+     </a>
+     <span class="tooltip">Valoranos</span>
+   </li>
+   <li>
+     <a href="#">
+       <i class='bx bx-cog' ></i>
+       <span class="links_name">Configuracion</span>
+     </a>
+     <span class="tooltip">Configuracion</span>
+   </li>
+   <li class="profile">
+       <div class="profile-details">
+         <img src="profile.jpg" alt="profileImg">
+         <div class="name_job">
+           <div class="name">Usuario</div>
+           <div class="job">Desea Salir?</div>
+         </div>
+       </div>
+       <i class='bx bx-log-out' id="log_out" onclick="cerrarsesion()" >
+        
+  
+         
+       </i>
+   </li>
+  </ul>
+</div>
+<section class="home-section">
+   
+       <!--contenedor principal-->
+       <!--encabezado-->   
       <nav class="navbar navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand" href="#"><h1>Bienvenido(a)  a tu lista de que haceres.</h1></a> 
+          <div class='reloj'>
+            <span id='tiempo'>00 : 00 : 00</span>
+          </div>
         </div>
-        <button onclick="cerrarsesion()" type="button" class="btn btn-warning">Cerrar sesion</button>
-  
+        <!-- agrege esto mas -->
+       
+        
       </nav>
-    
-     <!--contenedor principal-->
 
     <div class="container">
       <div class="row my-5">
@@ -62,14 +147,17 @@
           <div id="tasks"></div>
         </div>
       </div>
-       <!-- agrege esto mas -->
-       <div class='reloj'>
-          <span id='tiempo'>00 : 00 : 00</span>
-        </div>
-    </div><div>hi</div>
+
+    <!-- termina aca-->
+</section>
+
+
+</script>
+      
     <!-- scrip-->
     <script src="assets/js/cerrarsesion.js"></script>
     <script src="appp.js"></script>
     <script src="js/reloj.js"></script>
+    <script src="js/nadvar.js"></script>
   </body>
 </html>
